@@ -9,4 +9,8 @@
 
     <string name="menu_today_todo">Today\'s TODOs</string>
     <string name="menu_all_todos">All TODOs</string>
+    <string name="menu_new_todo">New TODO</string>
+
+    <string name="todo_name">TODO Name</string>
+    <string name="todo_description">TODO Description</string>
 </resources>

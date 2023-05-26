@@ -12,6 +12,13 @@
         tools:layout="@layout/fragment_today_todos" />
 
     <fragment
+        android:id="@+id/nav_new_todo"
+        android:name="ro.ase.pdm.ultratodo.ui.newtodo.NewTodoFragment"
+        android:label="@string/menu_new_todo"
+        tools:layout="@layout/fragment_new_todo"
+        />
+
+    <fragment
         android:id="@+id/nav_gallery"
         android:name="ro.ase.pdm.ultratodo.ui.alltodos.AllTodosFragment"
         android:label="@string/menu_all_todos"
