@@ -363,4 +363,9 @@ MigrationBackup/
 FodyWeavers.xsd
 
 .idea/*
+.gradle/*
 *.lock
+
+# Default ignored files
+/shelf/
+/workspace.xml
