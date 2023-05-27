@@ -24,10 +24,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
-    private lateinit var todoListRecyclerView: RecyclerView
-    private lateinit var todoListAdapter: TodoListAdapter
-    private lateinit var todoList: List<Todo>
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -52,37 +48,6 @@ class MainActivity : AppCompatActivity() {
         binding.appBarMain.fab.setOnClickListener {
             navController.navigate(R.id.nav_new_todo)
         }
-
-        //
-        todoList = listOf(
-            Todo(
-                "test1",
-                TodoPriority.Low,
-                TodoState.Pending,
-                TodoType.Normal,
-                "lorem",
-                null
-            ),
-            Todo(
-                "test2",
-                TodoPriority.Low,
-                TodoState.Pending,
-                TodoType.Normal,
-                "lorem",
-                null
-            ), Todo(
-                "test3",
-                TodoPriority.Low,
-                TodoState.Pending,
-                TodoType.Normal,
-                "lorem",
-                null
-            )
-        )
-        todoListRecyclerView = findViewById(R.id.todo_recycler_view)
-        todoListAdapter = TodoListAdapter(todoList)
-        todoListRecyclerView.adapter = todoListAdapter
-        todoListRecyclerView.layoutManager = LinearLayoutManager(this)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

@@ -82,10 +82,9 @@ class NewTodoFragment : Fragment() {
             val title = titleEditText.text.toString()
             val description = descriptionEditText.text.toString()
 
-            val todo =
-                Todo(title, TodoPriority.Low, TodoState.Pending, TodoType.Normal, description, null)
+            Todo(title, priority, TodoState.Pending, type, description, null)
 
-            viewModel.saveTodo(todo)
+            viewModel.saveTodo(title, description, priority, type, null)
 
             titleEditText.text.clear()
             priorityRadioGroup.clearCheck()
@@ -95,5 +94,4 @@ class NewTodoFragment : Fragment() {
 
         return root
     }
-
 }

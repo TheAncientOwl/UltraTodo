@@ -1,14 +1,20 @@
 package ro.ase.pdm.ultratodo.data
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.room.*
 
 @Dao
 interface TodoDao {
-    @Query("SELECT * FROM TODOs")
-    suspend fun getAll(): List<Todo>
+    @Query("SELECT * FROM todos")
+    fun getAllTodos(): LiveData<List<Todo>>
 
     @Insert
-    suspend fun insert(todo: Todo): Long
+    suspend fun insert(todo: Todo)
+
+    @Update
+    suspend fun update(todo: Todo)
+
+    @Delete
+    suspend fun delete(todo: Todo)
 }
