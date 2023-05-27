@@ -54,7 +54,31 @@ class MainActivity : AppCompatActivity() {
         }
 
         //
-        todoList = listOf(Todo("test", TodoPriority.Low, TodoState.Pending, TodoType.Normal, "lorem", null))
+        todoList = listOf(
+            Todo(
+                "test1",
+                TodoPriority.Low,
+                TodoState.Pending,
+                TodoType.Normal,
+                "lorem",
+                null
+            ),
+            Todo(
+                "test2",
+                TodoPriority.Low,
+                TodoState.Pending,
+                TodoType.Normal,
+                "lorem",
+                null
+            ), Todo(
+                "test3",
+                TodoPriority.Low,
+                TodoState.Pending,
+                TodoType.Normal,
+                "lorem",
+                null
+            )
+        )
         todoListRecyclerView = findViewById(R.id.todo_recycler_view)
         todoListAdapter = TodoListAdapter(todoList)
         todoListRecyclerView.adapter = todoListAdapter

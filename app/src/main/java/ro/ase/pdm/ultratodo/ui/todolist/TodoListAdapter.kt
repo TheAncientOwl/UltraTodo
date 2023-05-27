@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ro.ase.pdm.ultratodo.data.Todo
 import ro.ase.pdm.ultratodo.R
+import ro.ase.pdm.ultratodo.data.TodoState
 
 class TodoListAdapter(private val todoList: List<Todo>) : RecyclerView.Adapter<TodoListViewHolder>() {
 
@@ -18,7 +19,7 @@ class TodoListAdapter(private val todoList: List<Todo>) : RecyclerView.Adapter<T
 
         holder.titleTextView.text = currentTodo.title
         holder.priorityTextView.text = "Priority: ${currentTodo.priority}"
-        holder.stateTextView.text = "State: ${currentTodo.state}"
+        holder.stateCheckBox.isChecked = currentTodo.state == TodoState.Done;
     }
 
     override fun getItemCount() = todoList.size
