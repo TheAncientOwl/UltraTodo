@@ -13,4 +13,19 @@
 
     <string name="todo_name">TODO Name</string>
     <string name="todo_description">TODO Description</string>
+    <string name="todo_list">Todo List</string>
+    <string name="new_todo">New Todo</string>
+    <string name="title">Title</string>
+    <string name="priority">Priority</string>
+    <string name="low">Low</string>
+    <string name="type">Type</string>
+    <string name="normal">Normal</string>
+    <string name="description">Description</string>
+    <string name="add_todo">Add Todo</string>
+    <string name="low_opt">Low</string>
+    <string name="medium_opt">Medium</string>
+    <string name="high_opt">High</string>
+    <string name="urgent_opt">Urgent</string>
+    <string name="priority_label">Priority</string>
+    <string name="type_label">Type</string>
 </resources>

@@ -3,24 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_todo_list">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="ro.ase.pdm.ultratodo.ui.todaytodo.TodayTodoFragment"
-        android:label="@string/menu_today_todo"
-        tools:layout="@layout/fragment_today_todos" />
+        android:id="@+id/nav_todo_list"
+        android:name="ro.ase.pdm.ultratodo.ui.todolist.TodoListFragment"
+        android:label="@string/todo_list"
+        tools:layout="@layout/fragment_todo_list" />
 
     <fragment
         android:id="@+id/nav_new_todo"
         android:name="ro.ase.pdm.ultratodo.ui.newtodo.NewTodoFragment"
-        android:label="@string/menu_new_todo"
-        tools:layout="@layout/fragment_new_todo"
-        />
-
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="ro.ase.pdm.ultratodo.ui.alltodos.AllTodosFragment"
-        android:label="@string/menu_all_todos"
-        tools:layout="@layout/fragment_all_todos" />
+        android:label="@string/new_todo"
+        tools:layout="@layout/fragment_new_todo" />
 </navigation>

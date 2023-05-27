@@ -6,7 +6,7 @@ import java.util.Date
 
 @Entity(tableName = "TODOs")
 class Todo(
-    var name: String,
+    var title: String,
     var priority: TodoPriority,
     var state: TodoState,
     var type: TodoType,
