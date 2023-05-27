@@ -2,7 +2,6 @@ package ro.ase.pdm.ultratodo
 
 import android.os.Bundle
 import android.view.Menu
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -12,7 +11,6 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import ro.ase.pdm.ultratodo.databinding.ActivityMainBinding
-import ro.ase.pdm.ultratodo.ui.newtodo.NewTodoFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,14 +32,14 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery
+                R.id.nav_home
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
         binding.appBarMain.fab.setOnClickListener {
-            navController.navigate(R.id.nav_new_todo)
+//            navController.navigate(R.id.nav_new_todo)
         }
     }
 

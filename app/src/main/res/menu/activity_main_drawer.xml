@@ -8,14 +8,5 @@
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_today_todos"
             android:title="@string/menu_today_todo" />
-        <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_all_todos"
-            android:title="@string/menu_all_todos" />
-        <item
-            android:id="@+id/nav_new_todo"
-            android:icon="@drawable/ic_add"
-            android:title="@string/menu_new_todo"
-            />
     </group>
 </menu>
