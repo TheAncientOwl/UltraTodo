@@ -13,4 +13,5 @@
 
     <string name="todo_name">TODO Name</string>
     <string name="todo_description">TODO Description</string>
+    <string name="todo_list">Todo List</string>
 </resources>

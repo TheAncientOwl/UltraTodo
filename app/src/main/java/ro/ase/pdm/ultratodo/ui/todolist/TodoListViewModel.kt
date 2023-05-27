@@ -1,11 +1,10 @@
-package ro.ase.pdm.ultratodo.ui.todaytodo
+package ro.ase.pdm.ultratodo.ui.todolist
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class TodayTodoViewModel : ViewModel() {
-
+class TodoListViewModel : ViewModel() {
     private val _text = MutableLiveData<String>().apply {
         value = "This is today todo Fragment"
     }

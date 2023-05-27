@@ -1,4 +1,4 @@
-package ro.ase.pdm.ultratodo.ui.todaytodo
+package ro.ase.pdm.ultratodo.ui.todolist
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import ro.ase.pdm.ultratodo.databinding.FragmentTodayTodosBinding
+import ro.ase.pdm.ultratodo.databinding.FragmentTodoListBinding
 
-class TodayTodoFragment : Fragment() {
+class TodoListFragment : Fragment() {
 
-    private var _binding: FragmentTodayTodosBinding? = null
+    private var _binding: FragmentTodoListBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -22,21 +22,17 @@ class TodayTodoFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val todayTodoViewModel =
-            ViewModelProvider(this).get(TodayTodoViewModel::class.java)
+        val todoListViewModel =
+            ViewModelProvider(this).get(TodoListViewModel::class.java)
 
-        _binding = FragmentTodayTodosBinding.inflate(inflater, container, false)
+        _binding = FragmentTodoListBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
-        todayTodoViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.textTodoList
+        todoListViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
-        return root
-    }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+        return root
     }
 }
