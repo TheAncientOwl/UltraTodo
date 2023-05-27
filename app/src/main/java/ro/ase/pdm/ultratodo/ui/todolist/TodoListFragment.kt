@@ -17,21 +17,22 @@ class TodoListFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
+    private lateinit var viewModel: TodoListViewModel
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val todoListViewModel =
-            ViewModelProvider(this).get(TodoListViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(TodoListViewModel::class.java)
 
         _binding = FragmentTodoListBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textTodoList
-        todoListViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+//        val textView: TextView = binding.textTodoList
+//        todoListViewModel.text.observe(viewLifecycleOwner) {
+//            textView.text = it
+//        }
 
         return root
     }

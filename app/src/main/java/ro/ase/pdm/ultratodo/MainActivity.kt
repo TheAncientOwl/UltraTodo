@@ -10,12 +10,23 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import ro.ase.pdm.ultratodo.data.Todo
+import ro.ase.pdm.ultratodo.data.TodoPriority
+import ro.ase.pdm.ultratodo.data.TodoState
+import ro.ase.pdm.ultratodo.data.TodoType
 import ro.ase.pdm.ultratodo.databinding.ActivityMainBinding
+import ro.ase.pdm.ultratodo.ui.todolist.TodoListAdapter
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
+
+    private lateinit var todoListRecyclerView: RecyclerView
+    private lateinit var todoListAdapter: TodoListAdapter
+    private lateinit var todoList: List<Todo>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +52,13 @@ class MainActivity : AppCompatActivity() {
         binding.appBarMain.fab.setOnClickListener {
 //            navController.navigate(R.id.nav_new_todo)
         }
+
+        //
+        todoList = listOf(Todo("test", TodoPriority.Low, TodoState.Pending, TodoType.Normal, "lorem", null))
+        todoListRecyclerView = findViewById(R.id.todo_recycler_view)
+        todoListAdapter = TodoListAdapter(todoList)
+        todoListRecyclerView.adapter = todoListAdapter
+        todoListRecyclerView.layoutManager = LinearLayoutManager(this)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
