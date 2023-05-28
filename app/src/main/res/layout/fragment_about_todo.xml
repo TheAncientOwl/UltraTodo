@@ -30,4 +30,11 @@
         android:layout_marginHorizontal="20dp"
         android:textSize="16sp"
         android:paddingBottom="15dp" />
+
+    <Button
+        android:id="@+id/navToInfoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/moreinfo" />
+
 </LinearLayout>

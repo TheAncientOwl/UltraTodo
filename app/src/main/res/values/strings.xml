@@ -41,5 +41,13 @@
     <string name="delete">Delete</string>
     <string name="delete_todo">Delete todo</string>
     <string name="edit_todo">Edit Todo</string>
+    <string name="info_fragment1">"Welcome to UltraTodo, the ultimate productivity app for managing your tasks and to-do lists effortlessly.
+Our goal is to provide a seamless and intuitive experience, helping you stay organized and focused on your daily tasks with ease.
+Built with the latest technologies, UltraTodo offers a sleek and modern interface that adapts to your needs across all devices and platforms."</string>
+    <string name="info_fragment2">"In addition to creating and organizing your to-do lists, UltraTodo offers a range of advanced functionalities. Set priorities, track task progress, add due dates, and categorize tasks based on their type or urgency.
+We understand that productivity is not limited to a single screen. That's why UltraTodo seamlessly syncs your tasks across devices, ensuring you can access and update them wherever you go."</string>
+    <string name="info_fragment3">"But UltraTodo is more than just a task manager. It's a hub for personal growth and achievement. Join our community of motivated individuals to share tips, strategies, and inspiration for maximizing productivity.
+Whether you're a busy professional, a student with a packed schedule, or simply someone who wants to stay organized, UltraTodo is your go-to app for staying on top of your tasks and achieving your goals efficiently."</string>
+    <string name="moreinfo">More info</string>
     <string name="today_s_todos">Today\'s TODOs</string>
 </resources>
