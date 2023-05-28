@@ -9,6 +9,9 @@ interface TodoDao {
     @Query("SELECT * FROM todos")
     fun getAllTodos(): LiveData<List<Todo>>
 
+    @Query("SELECT * FROM todos WHERE id = :todoId")
+    suspend fun getTodoById(todoId: Int): Todo?
+
     @Insert
     suspend fun insert(todo: Todo)
 

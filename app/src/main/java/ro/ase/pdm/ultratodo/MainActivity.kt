@@ -17,7 +17,7 @@ import ro.ase.pdm.ultratodo.data.TodoPriority
 import ro.ase.pdm.ultratodo.data.TodoState
 import ro.ase.pdm.ultratodo.data.TodoType
 import ro.ase.pdm.ultratodo.databinding.ActivityMainBinding
-import ro.ase.pdm.ultratodo.ui.todolist.TodoListAdapter
+
 
 class MainActivity : AppCompatActivity() {
 
