@@ -41,4 +41,5 @@
     <string name="delete">Delete</string>
     <string name="delete_todo">Delete todo</string>
     <string name="edit_todo">Edit Todo</string>
+    <string name="today_s_todos">Today\'s TODOs</string>
 </resources>

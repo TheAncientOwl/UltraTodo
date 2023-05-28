@@ -7,7 +7,7 @@
         <item
             android:id="@+id/nav_todo_list"
             android:icon="@drawable/ic_menu_today_todos"
-            android:title="@string/todo_list" />
+            android:title="@string/today_s_todos" />
 
         <item
             android:id="@+id/nav_todo_list_all"
