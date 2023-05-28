@@ -3,7 +3,7 @@ package ro.ase.pdm.ultratodo.data
 import android.os.Parcel
 import android.os.Parcelable
 
-data class Location(var latitude: Double, var longitude: Double) : Parcelable {
+data class Location(var latitude: Double, var longitude: Double) : Parcelable, java.io.Serializable {
     constructor(parcel: Parcel) : this(
         parcel.readDouble(),
         parcel.readDouble()

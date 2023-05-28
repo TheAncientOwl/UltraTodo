@@ -6,121 +6,133 @@
     android:padding="16dp"
     app:cardElevation="2dp">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="15dp">
+        android:layout_height="wrap_content">
 
-        <RelativeLayout
-            android:id="@+id/popup_anchor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/titleTextInputLayout"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:hint="@string/title">
+            android:orientation="vertical"
+            android:padding="15dp">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/titleEditText"
-                android:layout_width="match_parent"
+            <RelativeLayout
+                android:id="@+id/popup_anchor"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-        </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/descriptionTextInputLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:hint="@string/description">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/descriptionEditText"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/titleTextInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="70dp" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:layout_margin="10dp"
+                android:hint="@string/title">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/titleEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/descriptionTextInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/priority_label" />
+                android:layout_margin="10dp"
+                android:hint="@string/description">
 
-            <RadioGroup
-                android:id="@+id/priorityRadioGroup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <RadioButton
-                    android:id="@+id/radioButtonLow"
-                    android:layout_width="wrap_content"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/descriptionEditText"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/low_opt" />
+                    android:minHeight="70dp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-                <RadioButton
-                    android:id="@+id/radioButtonMedium"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/medium_opt" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/radioButtonHigh"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/high_opt" />
+                    android:text="@string/priority_label" />
 
-                <RadioButton
-                    android:id="@+id/radioButtonUrgent"
+                <RadioGroup
+                    android:id="@+id/priorityRadioGroup"
                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonLow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/low_opt" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/medium_opt" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonHigh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/high_opt" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonUrgent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/urgent_opt" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/urgent_opt" />
-            </RadioGroup>
+                    android:text="@string/type_label" />
+
+                <RadioGroup
+                    android:id="@+id/typeRadioGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/radioButtonNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Normal" />
+
+                    <RadioButton
+                        android:id="@+id/radioButtonLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Location" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cameraZoom="12" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/add_todo" />
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/type_label" />
-
-            <RadioGroup
-                android:id="@+id/typeRadioGroup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <RadioButton
-                    android:id="@+id/radioButtonNormal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Normal" />
-
-                <RadioButton
-                    android:id="@+id/radioButtonLocation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Location" />
-            </RadioGroup>
-        </LinearLayout>
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/addButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="@string/add_todo" />
-    </LinearLayout>
+    </ScrollView>
 </com.google.android.material.card.MaterialCardView>
