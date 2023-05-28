@@ -3,6 +3,7 @@ package ro.ase.pdm.ultratodo.data
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.room.*
+import java.util.Date
 
 @Dao
 interface TodoDao {
@@ -12,10 +13,8 @@ interface TodoDao {
     @Query("SELECT * FROM todos WHERE id = :todoId")
     suspend fun getTodoById(todoId: Int): Todo?
 
-
     @Insert
     suspend fun insert(todo: Todo)
-
 
     @Update
     suspend fun update(todo: Todo)

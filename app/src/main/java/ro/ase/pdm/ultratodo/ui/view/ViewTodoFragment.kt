@@ -75,5 +75,4 @@ class ViewTodoFragment : Fragment() {
             return fragment
         }
     }
-
 }

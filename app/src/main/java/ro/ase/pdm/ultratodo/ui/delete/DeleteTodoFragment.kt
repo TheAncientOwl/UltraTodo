@@ -11,7 +11,6 @@ import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import ro.ase.pdm.ultratodo.R
-import ro.ase.pdm.ultratodo.ui.edit.EditTodoFragmentArgs
 
 class DeleteTodoFragment : Fragment() {
     companion object {
@@ -32,6 +31,8 @@ class DeleteTodoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        viewModel = ViewModelProvider(this).get(DeleteTodoViewModel::class.java)
+
         val rootView = inflater.inflate(R.layout.fragment_delete_todo, container, false)
 
         todoNameTextView = rootView.findViewById(R.id.text_todo_name)
@@ -54,11 +55,5 @@ class DeleteTodoFragment : Fragment() {
         }
 
         return rootView
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(DeleteTodoViewModel::class.java)
-        // TODO: Use the ViewModel
     }
 }
