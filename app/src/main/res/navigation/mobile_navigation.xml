@@ -13,6 +13,12 @@
         tools:layout="@layout/fragment_todo_list" />
 
     <fragment
+        android:id="@+id/nav_todo_list_all"
+        android:name="ro.ase.pdm.ultratodo.ui.todolistall.TodoListAllFragment"
+        android:label="All Todos"
+        tools:layout="@layout/fragment_todo_list_all" />
+
+    <fragment
         android:id="@+id/nav_new_todo"
         android:name="ro.ase.pdm.ultratodo.ui.newtodo.NewTodoFragment"
         android:label="@string/new_todo"

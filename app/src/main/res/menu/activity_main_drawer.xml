@@ -10,6 +10,11 @@
             android:title="@string/todo_list" />
 
         <item
+            android:id="@+id/nav_todo_list_all"
+            android:icon="@drawable/ic_menu_all_todos"
+            android:title="@string/all_todos" />
+
+        <item
             android:id="@+id/nav_new_todo"
             android:icon="@drawable/ic_add"
             android:title="@string/new_todo" />
@@ -18,7 +23,6 @@
             android:id="@+id/nav_to_about_us"
             android:icon="@drawable/ic_about_us"
             android:title="About us" />
-
 
     </group>
 </menu>

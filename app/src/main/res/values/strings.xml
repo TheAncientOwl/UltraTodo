@@ -33,4 +33,5 @@
     <string name="app_version">Version: 1.0.0</string>
     <string name="app_authors">Authors: Delegeanu Alexandru, Francu Catalin, Goia Ciprian-Gabriel, Linca Alin</string>
     <string name="app_about">Descrierea paginii de about</string>
+    <string name="all_todos">All TODOs</string>
 </resources>
