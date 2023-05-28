@@ -52,6 +52,13 @@
         android:textSize="18sp"
         android:lineSpacingExtra="8dp"/>
 
+    <Button
+        android:id="@+id/editButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Todo"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"/>
 
 
 </LinearLayout>
