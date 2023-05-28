@@ -1,4 +1,4 @@
-package ro.ase.pdm.ultratodo.ui.todolist
+package ro.ase.pdm.ultratodo.ui.todolistall
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,11 +11,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import ro.ase.pdm.ultratodo.data.TodoDatabase
 import ro.ase.pdm.ultratodo.data.TodoRepository
-import ro.ase.pdm.ultratodo.databinding.FragmentTodoListBinding
+import ro.ase.pdm.ultratodo.databinding.FragmentTodoListAllBinding
+import ro.ase.pdm.ultratodo.ui.todolist.TodoListFragmentDirections
+import ro.ase.pdm.ultratodo.ui.todolist.TodoListViewModel
 
-class TodoListFragment : Fragment() {
+class TodoListAllFragment : Fragment() {
 
-    private var _binding: FragmentTodoListBinding? = null
+    private var _binding: FragmentTodoListAllBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var viewModel: TodoListViewModel
@@ -25,7 +27,7 @@ class TodoListFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentTodoListBinding.inflate(inflater, container, false)
+        _binding = FragmentTodoListAllBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         viewModel = ViewModelProvider(this).get(TodoListViewModel::class.java)
@@ -34,11 +36,11 @@ class TodoListFragment : Fragment() {
         val todoRepository = TodoRepository(todoDao)
         viewModel.setTodoRepository(todoRepository)
 
-        val todoListRecyclerView: RecyclerView = binding.todoRecyclerView
+        val todoListRecyclerView: RecyclerView = binding.todoAllRecyclerView
         todoListRecyclerView.layoutManager = LinearLayoutManager(context)
 
         val todos = viewModel.allTodos.value ?: emptyList()
-        val adapter = TodoListAdapter(todos)
+        val adapter = TodoListAllAdapter(todos)
         adapter.setOnItemClickListener { todo ->
             val action = TodoListFragmentDirections.actionTodoListFragmentToViewTodoFragment(todo)
             findNavController().navigate(action)

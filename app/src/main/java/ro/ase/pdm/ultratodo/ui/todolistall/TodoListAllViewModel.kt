@@ -1,4 +1,4 @@
-package ro.ase.pdm.ultratodo.ui.todolist
+package ro.ase.pdm.ultratodo.ui.todolistall
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -7,7 +7,7 @@ import androidx.lifecycle.MutableLiveData
 import ro.ase.pdm.ultratodo.data.Todo
 import ro.ase.pdm.ultratodo.data.TodoRepository
 
-class TodoListViewModel(app: Application) : AndroidViewModel(app) {
+class TodoListAllViewModel(app: Application) : AndroidViewModel(app) {
     private lateinit var todoRepository: TodoRepository
     var allTodos: LiveData<List<Todo>> = MutableLiveData()
 
