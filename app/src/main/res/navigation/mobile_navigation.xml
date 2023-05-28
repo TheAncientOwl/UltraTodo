@@ -16,4 +16,10 @@
         android:name="ro.ase.pdm.ultratodo.ui.newtodo.NewTodoFragment"
         android:label="@string/new_todo"
         tools:layout="@layout/fragment_new_todo" />
+
+    <fragment
+        android:id="@+id/aboutTodoFragment"
+        android:name="ro.ase.pdm.ultratodo.ui.AboutTodo.AboutTodoFragment"
+        android:label="About Todo" />
+
 </navigation>
