@@ -10,34 +10,30 @@
         android:id="@+id/text_todo_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="Todo name" />
+        android:padding="10dp"/>
 
     <TextView
         android:id="@+id/text_todo_state"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="Todo state" />
+        android:padding="10dp"/>
 
     <TextView
         android:id="@+id/text_todo_priority"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="Todo priority" />
+        android:padding="10dp"/>
 
     <TextView
         android:id="@+id/text_check_question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="Are you sure do you want to delete this todo?" />
+        android:text="@string/are_you_sure_do_you_want_to_delete_this_todo" />
 
     <Button
-        android:id="@+id/btn_delete"
+        android:id="@+id/deleteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Delete" />
-
+        android:text="@string/delete" />
 </LinearLayout>
