@@ -6,6 +6,10 @@ import androidx.recyclerview.widget.RecyclerView
 import ro.ase.pdm.ultratodo.data.Todo
 import ro.ase.pdm.ultratodo.R
 import ro.ase.pdm.ultratodo.data.TodoState
+import java.text.SimpleDateFormat
+import java.time.format.DateTimeFormatter
+import java.util.Locale
+import java.util.logging.SimpleFormatter
 
 class TodoListAllAdapter(private var todoList: List<Todo>) : RecyclerView.Adapter<TodoListAllViewHolder>() {
 
@@ -16,7 +20,7 @@ class TodoListAllAdapter(private var todoList: List<Todo>) : RecyclerView.Adapte
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodoListAllViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.todo_item, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.todo_all_item, parent, false)
         val viewHolder = TodoListAllViewHolder(itemView)
 
         viewHolder.stateCheckBox.isEnabled = false
@@ -30,6 +34,10 @@ class TodoListAllAdapter(private var todoList: List<Todo>) : RecyclerView.Adapte
         holder.titleTextView.text = currentTodo.title
         holder.priorityTextView.text = "Priority: ${currentTodo.priority}"
         holder.stateCheckBox.isChecked = currentTodo.state == TodoState.Done
+
+        val format = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+        val dateString = format.format(currentTodo.creationDate)
+        holder.creationDateTextView.text = "Created at: $dateString"
 
         // Set the click listener for the item view
         holder.itemView.setOnClickListener {

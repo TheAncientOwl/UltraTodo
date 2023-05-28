@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView
 import ro.ase.pdm.ultratodo.data.TodoDatabase
 import ro.ase.pdm.ultratodo.data.TodoRepository
 import ro.ase.pdm.ultratodo.databinding.FragmentTodoListAllBinding
-import ro.ase.pdm.ultratodo.ui.todolist.TodoListAdapter
 import ro.ase.pdm.ultratodo.ui.todolist.TodoListFragmentDirections
 import ro.ase.pdm.ultratodo.ui.todolist.TodoListViewModel
 
@@ -41,7 +40,7 @@ class TodoListAllFragment : Fragment() {
         todoListRecyclerView.layoutManager = LinearLayoutManager(context)
 
         val todos = viewModel.allTodos.value ?: emptyList()
-        val adapter = TodoListAdapter(todos)
+        val adapter = TodoListAllAdapter(todos)
         adapter.setOnItemClickListener { todo ->
             val action = TodoListFragmentDirections.actionTodoListFragmentToViewTodoFragment(todo)
             findNavController().navigate(action)
