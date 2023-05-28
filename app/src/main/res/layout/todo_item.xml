@@ -8,6 +8,7 @@
     android:padding="25dp">
 
     <LinearLayout
+        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
@@ -35,6 +36,7 @@
                 android:id="@+id/priorityTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>

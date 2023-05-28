@@ -36,10 +36,17 @@ class ViewTodoFragment : Fragment() {
         viewModel.todo.observe(viewLifecycleOwner) { loadedTodo ->
             loadedTodo?.let { displayTodoDetails(it) }
         }
+
         binding.editButton.setOnClickListener {
             val action = ViewTodoFragmentDirections.actionViewTodoFragmentToEditTodoFragment(todo)
             findNavController().navigate(action)
         }
+
+        binding.deleteButton.setOnClickListener {
+            val action = ViewTodoFragmentDirections.actionViewTodoFragmentToDeleteTodoFragment(todo)
+            findNavController().navigate(action)
+        }
+
         return root
     }
 

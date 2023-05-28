@@ -16,5 +16,9 @@ class TodoRepository(private val todoDao: TodoDao) {
         // For example, you can call a method in your TodoDao to update the todo item in the database
         todoDao.update(todo)
     }
+
+    suspend fun delete(todo: Todo) {
+        todoDao.delete(todo)
+    }
 }
 

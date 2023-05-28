@@ -15,8 +15,6 @@ class AboutTodoFragment : Fragment() {
         fun newInstance() = AboutTodoFragment()
     }
 
-    private lateinit var viewModel: AboutTodoViewModel
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -32,11 +30,5 @@ class AboutTodoFragment : Fragment() {
         authorsTextView.text = getString(R.string.app_authors)
 
         return rootView
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(AboutTodoViewModel::class.java)
-        // TODO: Use the ViewModel
     }
 }

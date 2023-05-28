@@ -8,13 +8,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import ro.ase.pdm.ultratodo.R
+import ro.ase.pdm.ultratodo.ui.edit.EditTodoFragmentArgs
 
 class DeleteTodoFragment : Fragment() {
-
     companion object {
         fun newInstance() = DeleteTodoFragment()
     }
+
+    private val args by navArgs<DeleteTodoFragmentArgs>()
 
     private lateinit var viewModel: DeleteTodoViewModel
 
@@ -34,18 +38,19 @@ class DeleteTodoFragment : Fragment() {
         todoStateTextView = rootView.findViewById(R.id.text_todo_state)
         todoPriorityTextView = rootView.findViewById(R.id.text_todo_priority)
         checkQuestionTextView = rootView.findViewById(R.id.text_check_question)
-        deleteButton = rootView.findViewById(R.id.btn_delete)
+        deleteButton = rootView.findViewById(R.id.deleteButton)
+
+        val todo = args.argTodo
 
         // Set the text values for the TextViews
-        todoNameTextView.text = "Todo name"
-        todoStateTextView.text = "Todo state"
-        todoPriorityTextView.text = "Todo priority"
+        todoNameTextView.text = "Title: ${todo.title}"
+        todoStateTextView.text = "State: ${todo.state.toString()}"
+        todoPriorityTextView.text = "Priority: ${todo.priority.toString()}"
         checkQuestionTextView.text = "Are you sure you want to delete this todo?"
 
-        // Set an onClickListener for the delete button
         deleteButton.setOnClickListener {
-            // Perform the delete operation
-            // Add your logic here
+            viewModel.deleteTodo(todo)
+            findNavController().navigate(R.id.nav_todo_list)
         }
 
         return rootView

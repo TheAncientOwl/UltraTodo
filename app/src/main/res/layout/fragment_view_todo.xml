@@ -4,61 +4,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="20dp"
     tools:context="ro.ase.pdm.ultratodo.ui.view.ViewTodoFragment">
 
     <TextView
         android:id="@+id/titleTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
         android:lineSpacingExtra="8dp"
-    />
+        android:layout_marginTop="10dp"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/priorityTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:lineSpacingExtra="8dp"/>
+        android:lineSpacingExtra="8dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/stateTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:lineSpacingExtra="8dp"/>
+        android:lineSpacingExtra="8dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/descriptionTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:lineSpacingExtra="8dp"/>
+        android:lineSpacingExtra="8dp"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/creationDateTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-
-        android:textColor="@android:color/black"
         android:lineSpacingExtra="8dp"
-        android:paddingBottom="8dp"/>
+        android:layout_marginTop="10dp"
+        android:paddingBottom="8dp"
+        android:textSize="18sp" />
 
     <Button
-        android:id="@+id/btn_delete"
-        android:layout_width="wrap_content"
+        android:id="@+id/deleteButton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Delete todo" />
-        android:lineSpacingExtra="8dp"/>
+        android:layout_marginTop="16dp"
+        android:text="@string/delete_todo" />
 
     <Button
         android:id="@+id/editButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Edit Todo"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"/>
-
-
+        android:layout_marginTop="16dp"
+        android:text="@string/edit_todo" />
 </LinearLayout>
