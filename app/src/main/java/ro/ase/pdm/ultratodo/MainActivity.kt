@@ -1,9 +1,7 @@
 package ro.ase.pdm.ultratodo
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.Menu
-import android.view.ViewGroup
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -12,14 +10,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import ro.ase.pdm.ultratodo.data.Todo
-import ro.ase.pdm.ultratodo.data.TodoPriority
-import ro.ase.pdm.ultratodo.data.TodoState
-import ro.ase.pdm.ultratodo.data.TodoType
 import ro.ase.pdm.ultratodo.databinding.ActivityMainBinding
-import ro.ase.pdm.ultratodo.ui.DeleteTodo.DeleteTodoFragment
 
 
 class MainActivity : AppCompatActivity() {

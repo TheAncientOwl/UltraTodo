@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".ui.AboutTodo.AboutTodoFragment">
+    tools:context=".ui.abouttodo.AboutTodoFragment">
 
     <TextView
         android:id="@+id/text_app_name"

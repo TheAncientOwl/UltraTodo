@@ -1,4 +1,4 @@
-package ro.ase.pdm.ultratodo.ui.AboutTodo
+package ro.ase.pdm.ultratodo.ui.abouttodo
 
 import androidx.lifecycle.ViewModel
 
