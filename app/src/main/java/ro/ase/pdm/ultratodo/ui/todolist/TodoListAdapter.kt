@@ -17,7 +17,11 @@ class TodoListAdapter(private var todoList: List<Todo>) : RecyclerView.Adapter<T
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodoListViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.todo_item, parent, false)
-        return TodoListViewHolder(itemView)
+        val viewHolder = TodoListViewHolder(itemView)
+
+        viewHolder.stateCheckBox.isEnabled = false
+
+        return viewHolder
     }
 
     override fun onBindViewHolder(holder: TodoListViewHolder, position: Int) {
