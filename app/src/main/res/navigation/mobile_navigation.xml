@@ -9,7 +9,7 @@
     <fragment
         android:id="@+id/nav_todo_list"
         android:name="ro.ase.pdm.ultratodo.ui.list.TodoListFragment"
-        android:label="@string/todo_list"
+        android:label="Today's TODOs"
         tools:layout="@layout/fragment_todo_list" />
 
     <fragment

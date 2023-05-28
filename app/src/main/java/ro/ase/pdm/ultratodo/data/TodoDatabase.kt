@@ -8,8 +8,6 @@ import androidx.room.*
 abstract class TodoDatabase : RoomDatabase() {
     abstract fun getTodoDao(): TodoDao
 
-    // Volatile, Synchronized
-
     companion object {
         private var todoDatabase: TodoDatabase? = null
 

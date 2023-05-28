@@ -49,4 +49,5 @@ We understand that productivity is not limited to a single screen. That's why Ul
     <string name="info_fragment3">"But UltraTodo is more than just a task manager. It's a hub for personal growth and achievement. Join our community of motivated individuals to share tips, strategies, and inspiration for maximizing productivity.
 Whether you're a busy professional, a student with a packed schedule, or simply someone who wants to stay organized, UltraTodo is your go-to app for staying on top of your tasks and achieving your goals efficiently."</string>
     <string name="moreinfo">More info</string>
+    <string name="today_s_todos">Today\'s TODOs</string>
 </resources>

@@ -63,13 +63,16 @@ class NewTodoFragment : Fragment(), OnMapReadyCallback {
 
     val geolocationReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent) {
-            val userLocation : Location = intent.getSerializableExtra("location") as Location
+            val userLocation: Location = intent.getSerializableExtra("location") as Location
 
             val location = LatLng(userLocation!!.latitude, userLocation!!.longitude)
             googleMap.addMarker(MarkerOptions().position(location).title("You're Here!"))
             googleMap.moveCamera(CameraUpdateFactory.newLatLng(location))
 
-            Log.d("NEW-TODO Location received", "${userLocation.latitude} - ${userLocation.longitude}")
+            Log.d(
+                "NEW-TODO Location received",
+                "${userLocation.latitude} - ${userLocation.longitude}"
+            )
         }
     }
 
@@ -115,7 +118,8 @@ class NewTodoFragment : Fragment(), OnMapReadyCallback {
         mapView.visibility = View.GONE
 
         val layoutParams = mapView.layoutParams
-        layoutParams.height = resources.displayMetrics.heightPixels / 2 // Set the desired height here
+        layoutParams.height =
+            resources.displayMetrics.heightPixels / 2 // Set the desired height here
         mapView.layoutParams = layoutParams
     }
 
