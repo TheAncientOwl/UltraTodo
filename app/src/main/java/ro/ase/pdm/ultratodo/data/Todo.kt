@@ -16,14 +16,9 @@ data class Todo(
     var description: String,
     var location: Location?
 ) : Parcelable {
-
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0
-
     var creationDate: Date = Date()
-
-    // ...
-
 
     override fun describeContents(): Int {
         return 0
@@ -60,5 +55,3 @@ data class Todo(
         }
     }
 }
-
-

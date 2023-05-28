@@ -21,18 +21,15 @@ class ViewTodoViewModel(app: Application) : AndroidViewModel(app) {
     fun loadTodoDetails(todoId: Int) {
         viewModelScope.launch {
             val retrievedTodo = todoDao.getTodoById(todoId)
-            _todo.value = retrievedTodo ?: Todo("", TodoPriority.Low, TodoState.Pending, TodoType.Normal, "", null)
+            _todo.value = retrievedTodo ?: Todo(
+                "",
+                TodoPriority.Low,
+                TodoState.Pending,
+                TodoType.Normal,
+                "",
+                null
+            )
 
         }
-    }
-
-    fun editTodo() {
-        // Handle the edit button click action
-        // Navigate to the edit todo page or perform any necessary actions
-    }
-
-    fun deleteTodo() {
-        // Handle the delete button click action
-        // Perform the deletion of the todo item from the database
     }
 }
