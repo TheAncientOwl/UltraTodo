@@ -1,4 +1,4 @@
-package ro.ase.pdm.ultratodo.ui.todolistall
+package ro.ase.pdm.ultratodo.ui.listall
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

@@ -1,4 +1,4 @@
-package ro.ase.pdm.ultratodo.ui.viewtodo
+package ro.ase.pdm.ultratodo.ui.view
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,4 +1,4 @@
-package ro.ase.pdm.ultratodo.ui.deletetodo
+package ro.ase.pdm.ultratodo.ui.delete
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle

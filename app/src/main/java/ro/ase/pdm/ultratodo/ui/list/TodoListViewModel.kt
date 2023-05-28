@@ -1,4 +1,4 @@
-package ro.ase.pdm.ultratodo.ui.todolist
+package ro.ase.pdm.ultratodo.ui.list
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

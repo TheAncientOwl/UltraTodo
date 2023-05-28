@@ -1,4 +1,4 @@
-package ro.ase.pdm.ultratodo.ui.edittodo
+package ro.ase.pdm.ultratodo.ui.edit
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel

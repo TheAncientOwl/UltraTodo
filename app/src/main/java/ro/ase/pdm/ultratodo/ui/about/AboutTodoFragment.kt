@@ -1,4 +1,4 @@
-package ro.ase.pdm.ultratodo.ui.abouttodo
+package ro.ase.pdm.ultratodo.ui.about
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -26,12 +26,10 @@ class AboutTodoFragment : Fragment() {
         val appNameTextView: TextView = rootView.findViewById(R.id.text_app_name)
         val versionTextView: TextView = rootView.findViewById(R.id.text_version)
         val authorsTextView: TextView = rootView.findViewById(R.id.text_authors)
-        val aboutTextView: TextView = rootView.findViewById(R.id.text_about)
 
         appNameTextView.text = getString(R.string.app_name)
         versionTextView.text = getString(R.string.app_version)
         authorsTextView.text = getString(R.string.app_authors)
-        aboutTextView.text = "Descrierea paginii de about"
 
         return rootView
     }

@@ -8,13 +8,13 @@
 
     <fragment
         android:id="@+id/nav_todo_list"
-        android:name="ro.ase.pdm.ultratodo.ui.todolist.TodoListFragment"
+        android:name="ro.ase.pdm.ultratodo.ui.list.TodoListFragment"
         android:label="@string/todo_list"
         tools:layout="@layout/fragment_todo_list" />
 
     <fragment
         android:id="@+id/nav_todo_list_all"
-        android:name="ro.ase.pdm.ultratodo.ui.todolistall.TodoListAllFragment"
+        android:name="ro.ase.pdm.ultratodo.ui.listall.TodoListAllFragment"
         android:label="All Todos"
         tools:layout="@layout/fragment_todo_list_all" />
 
@@ -25,7 +25,7 @@
         tools:layout="@layout/fragment_new_todo" />
     <fragment
         android:id="@+id/editTodoFragment"
-        android:name="ro.ase.pdm.ultratodo.ui.edittodo.EditTodoFragment"
+        android:name="ro.ase.pdm.ultratodo.ui.edit.EditTodoFragment"
         tools:layout="@layout/fragment_edit_todo">
 
         <argument
@@ -37,7 +37,7 @@
 
     <fragment
         android:id="@+id/viewTodoFragment"
-        android:name="ro.ase.pdm.ultratodo.ui.viewtodo.ViewTodoFragment"
+        android:name="ro.ase.pdm.ultratodo.ui.view.ViewTodoFragment"
         tools:layout="@layout/fragment_view_todo">
 
         <argument
@@ -56,7 +56,7 @@
 
     <fragment
         android:id="@+id/nav_to_about_us"
-        android:name="ro.ase.pdm.ultratodo.ui.abouttodo.AboutTodoFragment"
+        android:name="ro.ase.pdm.ultratodo.ui.about.AboutTodoFragment"
         android:label="About Todo"
         tools:layout="@layout/fragment_about_todo" />
 

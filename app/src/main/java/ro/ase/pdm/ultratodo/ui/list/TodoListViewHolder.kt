@@ -1,4 +1,4 @@
-package ro.ase.pdm.ultratodo.ui.todolist
+package ro.ase.pdm.ultratodo.ui.list
 
 import android.view.View
 import android.widget.CheckBox
