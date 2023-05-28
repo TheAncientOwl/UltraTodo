@@ -10,6 +10,9 @@ interface TodoDao {
     @Query("SELECT * FROM todos")
     fun getAllTodos(): LiveData<List<Todo>>
 
+    @Query("SELECT * FROM TODOs WHERE date(creationDate / 1000, 'unixepoch', 'localtime') = date('now', 'localtime')")
+    fun getAllTodosCreatedToday(): LiveData<List<Todo>>
+
     @Query("SELECT * FROM todos WHERE id = :todoId")
     suspend fun getTodoById(todoId: Int): Todo?
 

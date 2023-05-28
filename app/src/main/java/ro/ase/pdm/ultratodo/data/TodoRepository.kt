@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 
 class TodoRepository(private val todoDao: TodoDao) {
     val allTodos: LiveData<List<Todo>> = todoDao.getAllTodos()
+    val todayTodos: LiveData<List<Todo>> = todoDao.getAllTodosCreatedToday()
 
     fun getTodoById(todoId: String): Todo? {
         val todos = allTodos.value

@@ -37,7 +37,7 @@ class TodoListFragment : Fragment() {
         val todoListRecyclerView: RecyclerView = binding.todoRecyclerView
         todoListRecyclerView.layoutManager = LinearLayoutManager(context)
 
-        val todos = viewModel.allTodos.value ?: emptyList()
+        val todos = viewModel.todayTodos.value ?: emptyList()
         val adapter = TodoListAdapter(todos)
         adapter.setOnItemClickListener { todo ->
             val action = TodoListFragmentDirections.actionTodoListFragmentToViewTodoFragment(todo)
@@ -45,7 +45,7 @@ class TodoListFragment : Fragment() {
         }
         todoListRecyclerView.adapter = adapter
 
-        viewModel.allTodos.observe(viewLifecycleOwner) { todos ->
+        viewModel.todayTodos.observe(viewLifecycleOwner) { todos ->
             adapter.updateData(todos)
         }
 

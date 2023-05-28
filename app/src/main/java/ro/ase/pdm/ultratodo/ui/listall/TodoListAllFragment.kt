@@ -20,7 +20,7 @@ class TodoListAllFragment : Fragment() {
     private var _binding: FragmentTodoListAllBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var viewModel: TodoListViewModel
+    private lateinit var viewModel: TodoListAllViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,7 +30,7 @@ class TodoListAllFragment : Fragment() {
         _binding = FragmentTodoListAllBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        viewModel = ViewModelProvider(this).get(TodoListViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(TodoListAllViewModel::class.java)
 
         val todoDao = TodoDatabase.getInstance(requireContext()).getTodoDao()
         val todoRepository = TodoRepository(todoDao)
