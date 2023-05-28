@@ -28,4 +28,6 @@
     <string name="urgent_opt">Urgent</string>
     <string name="priority_label">Priority</string>
     <string name="type_label">Type</string>
+    <string name="todo_missing_fields">Please fill in the form in order to add a new todo!</string>
+    <string name="close">Close</string>
 </resources>
