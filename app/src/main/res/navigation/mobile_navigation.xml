@@ -70,4 +70,10 @@
     <action
         android:id="@+id/actionViewTodoFragmentToDeleteTodoFragment"
         app:destination="@id/deleteTodoFragment" />
+
+    <fragment
+        android:id="@+id/InfoTodoFragment"
+        android:name="ro.ase.pdm.ultratodo.ui.info.InfoTodoFragment"
+        tools:layout="@layout/fragment_info_todo" />
+
 </navigation>
