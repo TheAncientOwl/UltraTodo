@@ -100,24 +100,24 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/type_label" />
+                    android:text="@string/state" />
 
                 <RadioGroup
-                    android:id="@+id/typeRadioGroup"
+                    android:id="@+id/stateRadioGroup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
 
                     <RadioButton
-                        android:id="@+id/radioButtonNormal"
+                        android:id="@+id/radioButtonDone"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Normal" />
+                        android:text="@string/done" />
 
                     <RadioButton
-                        android:id="@+id/radioButtonLocation"
+                        android:id="@+id/radioButtonPending"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Location" />
+                        android:text="@string/pending" />
                 </RadioGroup>
             </LinearLayout>
 
