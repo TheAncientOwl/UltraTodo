@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="10dp">
 
         <CheckBox
             android:id="@+id/stateCheckBox"
@@ -35,12 +36,14 @@
                 android:id="@+id/priorityTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/creationDateTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:textSize="12sp" />
         </LinearLayout>
     </LinearLayout>
