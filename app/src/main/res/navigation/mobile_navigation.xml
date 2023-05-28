@@ -18,8 +18,9 @@
         tools:layout="@layout/fragment_new_todo" />
 
     <fragment
-        android:id="@+id/aboutTodoFragment"
+        android:id="@+id/nav_to_about_us"
         android:name="ro.ase.pdm.ultratodo.ui.AboutTodo.AboutTodoFragment"
-        android:label="About Todo" />
+        android:label="About Todo"
+        tools:layout="@layout/fragment_about_todo" />
 
 </navigation>

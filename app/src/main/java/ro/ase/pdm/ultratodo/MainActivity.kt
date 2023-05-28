@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_todo_list, R.id.nav_new_todo, R.id.aboutTodoFragment
+                R.id.nav_todo_list, R.id.nav_new_todo, R.id.nav_to_about_us
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -49,8 +49,6 @@ class MainActivity : AppCompatActivity() {
             navController.navigate(R.id.nav_new_todo)
         }
 
-        // Navigate to the AboutTodoFragment when the app starts
-        navController.navigate(R.id.aboutTodoFragment)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
