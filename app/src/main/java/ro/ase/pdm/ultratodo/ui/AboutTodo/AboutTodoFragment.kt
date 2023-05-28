@@ -31,7 +31,12 @@ class AboutTodoFragment : Fragment() {
         appNameTextView.text = getString(R.string.app_name)
         versionTextView.text = getString(R.string.app_version)
         authorsTextView.text = getString(R.string.app_authors)
-        aboutTextView.text = "Descrierea paginii de about"
+        aboutTextView.text = "Bine ați venit pe UltraTodo, cea mai bună aplicație de productivitate pentru a vă gestiona fără efort sarcinile și listele de sarcini.\n" +
+                "Scopul nostru este de a oferi o experiență intuitivă și fără cusur, ajutându-vă să vă organizați și să vă concentrați cu ușurință asupra sarcinilor zilnice.\n" +
+                "Construită cu cele mai recente tehnologii, UltraTodo oferă o interfață elegantă și modernă, care se adaptează la nevoile dvs. pe toate dispozitivele și platformele.\n" +
+                "Cu o abordare de design centrată pe utilizator, dezvoltatorii noștri au creat o aplicație care combină simplitatea cu caracteristici puternice, asigurând un flux de lucru productiv pentru toți utilizatorii.\n" +
+                "Dar UltraTodo este mai mult decât un simplu manager de sarcini. Este un hub pentru dezvoltare și realizare personală. Alăturați-vă comunității noastre de persoane motivate pentru a împărtăși sfaturi, strategii și inspirație pentru maximizarea productivității.\n" +
+                "Fie că sunteți un profesionist ocupat, un student cu un program încărcat sau pur și simplu o persoană care dorește să rămână organizată, UltraTodo este aplicația dvs. de bază pentru a vă menține în fruntea sarcinilor și pentru a vă atinge obiectivele în mod eficient."
 
         return rootView
     }
