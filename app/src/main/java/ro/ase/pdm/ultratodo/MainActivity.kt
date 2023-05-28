@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_todo_list, R.id.nav_new_todo
+                R.id.nav_todo_list, R.id.nav_new_todo, R.id.nav_to_about_us
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -48,6 +48,7 @@ class MainActivity : AppCompatActivity() {
         binding.appBarMain.fab.setOnClickListener {
             navController.navigate(R.id.nav_new_todo)
         }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
