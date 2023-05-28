@@ -65,15 +65,8 @@ class GeolocationService : Service() {
                 Looper.getMainLooper()
             )
 
-        } else {
-            locationProviderClient.removeLocationUpdates(locationCallback)
-
-
-
-            stopSelf()
+            running = true
         }
-
-        running = !running
 
         return super.onStartCommand(intent, flags, startId)
     }
