@@ -1,6 +1,5 @@
 package ro.ase.pdm.ultratodo.ui.EditTodo
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,19 +7,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import ro.ase.pdm.ultratodo.R
 import ro.ase.pdm.ultratodo.data.Todo
 import ro.ase.pdm.ultratodo.data.TodoDao
 import ro.ase.pdm.ultratodo.data.TodoDatabase
 import ro.ase.pdm.ultratodo.data.TodoRepository
 import ro.ase.pdm.ultratodo.databinding.FragmentEditTodoBinding
-import androidx.lifecycle.AndroidViewModel
-import ro.ase.pdm.ultratodo.ui.EditTodo.EditTodoViewModel
-
-
 
 class EditTodoFragment : Fragment() {
-
     private var _binding: FragmentEditTodoBinding? = null
     private val binding get() = _binding!!
     private val args by navArgs<EditTodoFragmentArgs>()
