@@ -34,4 +34,7 @@
     <string name="app_authors">Authors: Delegeanu Alexandru, Francu Catalin, Goia Ciprian-Gabriel, Linca Alin</string>
     <string name="app_about">Descrierea paginii de about</string>
     <string name="all_todos">All TODOs</string>
+    <string name="state">State</string>
+    <string name="done">Done</string>
+    <string name="pending">Pending</string>
 </resources>

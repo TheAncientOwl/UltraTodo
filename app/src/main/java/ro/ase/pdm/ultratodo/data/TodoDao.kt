@@ -12,8 +12,10 @@ interface TodoDao {
     @Query("SELECT * FROM todos WHERE id = :todoId")
     suspend fun getTodoById(todoId: Int): Todo?
 
+
     @Insert
     suspend fun insert(todo: Todo)
+
 
     @Update
     suspend fun update(todo: Todo)

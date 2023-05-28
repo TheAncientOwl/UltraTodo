@@ -10,6 +10,7 @@ class TodoListAdapter(private var todoList: List<Todo>) : RecyclerView.Adapter<T
 
     private var onItemClickListener: ((Todo) -> Unit)? = null
 
+
     fun setOnItemClickListener(listener: (Todo) -> Unit) {
         onItemClickListener = listener
     }
