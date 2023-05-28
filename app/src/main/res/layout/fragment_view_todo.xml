@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="20dp"
     tools:context="ro.ase.pdm.ultratodo.ui.view.ViewTodoFragment">
 
     <TextView
@@ -11,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:lineSpacingExtra="8dp"
+        android:layout_marginTop="10dp"
         android:textSize="18sp" />
 
     <TextView
@@ -18,6 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:lineSpacingExtra="8dp"
+        android:layout_marginTop="10dp"
         android:textSize="18sp" />
 
     <TextView
@@ -25,6 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:lineSpacingExtra="8dp"
+        android:layout_marginTop="10dp"
         android:textSize="18sp" />
 
     <TextView
@@ -32,6 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:lineSpacingExtra="8dp"
+        android:layout_marginTop="10dp"
         android:textSize="18sp" />
 
     <TextView
@@ -39,15 +44,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:lineSpacingExtra="8dp"
-
+        android:layout_marginTop="10dp"
         android:paddingBottom="8dp"
         android:textSize="18sp" />
 
     <Button
         android:id="@+id/deleteButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Delete todo" />
+        android:layout_marginTop="16dp"
+        android:text="@string/delete_todo" />
 
     <Button
         android:id="@+id/editButton"
@@ -55,7 +61,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
-        android:text="Edit Todo" />
-
-
+        android:text="@string/edit_todo" />
 </LinearLayout>
