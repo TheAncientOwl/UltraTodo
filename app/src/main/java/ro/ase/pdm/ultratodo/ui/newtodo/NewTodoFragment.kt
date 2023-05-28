@@ -75,6 +75,7 @@ class NewTodoFragment : Fragment(), OnMapReadyCallback {
         mapView = binding.root.findViewById(R.id.mapView)
         mapView.onCreate(savedInstanceState)
         mapView.getMapAsync(this)
+        mapView.visibility = View.GONE
 
         val layoutParams = mapView.layoutParams
         layoutParams.height = resources.displayMetrics.heightPixels / 2 // Set the desired height here
@@ -123,9 +124,11 @@ class NewTodoFragment : Fragment(), OnMapReadyCallback {
             when (checkedId) {
                 R.id.radioButtonNormal -> {
                     type = TodoType.Normal
+                    mapView.visibility = View.GONE
                 }
                 R.id.radioButtonLocation -> {
                     type = TodoType.Location
+                    mapView.visibility = View.VISIBLE
                 }
             }
         }
