@@ -1,28 +1,28 @@
 package ro.ase.pdm.ultratodo.ui.todolist
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.viewmodel.ViewModelFactoryDsl
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.coroutines.launch
 import ro.ase.pdm.ultratodo.R
 import ro.ase.pdm.ultratodo.data.Todo
 import ro.ase.pdm.ultratodo.data.TodoDatabase
 import ro.ase.pdm.ultratodo.data.TodoRepository
 import ro.ase.pdm.ultratodo.databinding.FragmentTodoListBinding
+import ro.ase.pdm.ultratodo.ui.todolist.TodoListFragmentDirections
+
+
+
 
 class TodoListFragment : Fragment() {
 
     private var _binding: FragmentTodoListBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     private lateinit var viewModel: TodoListViewModel
@@ -32,24 +32,35 @@ class TodoListFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        viewModel = ViewModelProvider(this).get(TodoListViewModel::class.java)
-
         _binding = FragmentTodoListBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        viewModel = ViewModelProvider(this).get(TodoListViewModel::class.java)
 
         val todoDao = TodoDatabase.getInstance(requireContext()).getTodoDao()
         val todoRepository = TodoRepository(todoDao)
         viewModel.setTodoRepository(todoRepository)
 
-        val todoListRecyclerView: RecyclerView = root.findViewById(R.id.todo_recycler_view)
+        val todoListRecyclerView: RecyclerView = binding.todoRecyclerView
         todoListRecyclerView.layoutManager = LinearLayoutManager(context)
-        if (viewModel.allTodos.value != null)
-            todoListRecyclerView.adapter = TodoListAdapter(viewModel.allTodos.value!!)
+
+        val todos = viewModel.allTodos.value ?: emptyList()
+        val adapter = TodoListAdapter(todos)
+        adapter.setOnItemClickListener { todo ->
+            val action = TodoListFragmentDirections.actionTodoListFragmentToViewTodoFragment(todo)
+            findNavController().navigate(action)
+        }
+        todoListRecyclerView.adapter = adapter
 
         viewModel.allTodos.observe(viewLifecycleOwner) { todos ->
-            todoListRecyclerView.adapter = TodoListAdapter(todos)
+            adapter.updateData(todos)
         }
 
         return root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
