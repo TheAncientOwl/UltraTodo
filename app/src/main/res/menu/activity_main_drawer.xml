@@ -13,5 +13,12 @@
             android:id="@+id/nav_new_todo"
             android:icon="@drawable/ic_add"
             android:title="@string/new_todo" />
+
+        <item
+            android:id="@+id/nav_to_about_us"
+            android:icon="@drawable/ic_about_us"
+            android:title="About us" />
+
+
     </group>
 </menu>
