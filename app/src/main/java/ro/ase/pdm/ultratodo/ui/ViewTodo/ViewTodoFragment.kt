@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
+import ro.ase.pdm.ultratodo.R
 import ro.ase.pdm.ultratodo.databinding.FragmentViewTodoBinding
 import ro.ase.pdm.ultratodo.data.Todo
+import ro.ase.pdm.ultratodo.ui.DeleteTodo.DeleteTodoFragment
 
 class ViewTodoFragment : Fragment() {
     private var _binding: FragmentViewTodoBinding? = null
@@ -64,4 +66,5 @@ class ViewTodoFragment : Fragment() {
             return fragment
         }
     }
+
 }

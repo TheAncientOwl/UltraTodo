@@ -1,7 +1,9 @@
 package ro.ase.pdm.ultratodo
 
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.Menu
+import android.view.ViewGroup
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -17,6 +19,7 @@ import ro.ase.pdm.ultratodo.data.TodoPriority
 import ro.ase.pdm.ultratodo.data.TodoState
 import ro.ase.pdm.ultratodo.data.TodoType
 import ro.ase.pdm.ultratodo.databinding.ActivityMainBinding
+import ro.ase.pdm.ultratodo.ui.DeleteTodo.DeleteTodoFragment
 
 
 class MainActivity : AppCompatActivity() {
@@ -61,4 +64,5 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+
 }
