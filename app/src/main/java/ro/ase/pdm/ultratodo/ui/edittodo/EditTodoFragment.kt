@@ -1,4 +1,4 @@
-package ro.ase.pdm.ultratodo.ui.EditTodo
+package ro.ase.pdm.ultratodo.ui.edittodo
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -18,7 +18,6 @@ class EditTodoFragment : Fragment() {
     private val binding get() = _binding!!
     private val args by navArgs<EditTodoFragmentArgs>()
 
-
     private lateinit var viewModel: EditTodoViewModel
 
     override fun onCreateView(
@@ -31,7 +30,7 @@ class EditTodoFragment : Fragment() {
 
         val todo = args.argTodo
         val todoDao: TodoDao = TodoDatabase.getInstance(requireContext()).getTodoDao()
-        val todoRepository: TodoRepository = TodoRepository(todoDao) // Replace with your actual implementation
+        val todoRepository = TodoRepository(todoDao)
         viewModel = EditTodoViewModel(requireActivity().application, todoRepository)
 
         binding.saveButton.setOnClickListener {
@@ -45,7 +44,12 @@ class EditTodoFragment : Fragment() {
                 state = todo.state,
                 type = todo.type
             )
-            viewModel.updateTodoItem2(updatedTodo)
+            updatedTodo.id = todo.id
+            updatedTodo.creationDate = todo.creationDate
+
+
+            viewModel.updateTodoItem(updatedTodo)
+
             findNavController().navigateUp()
         }
 

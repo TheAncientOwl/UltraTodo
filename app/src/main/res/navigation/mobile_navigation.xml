@@ -19,7 +19,7 @@
         tools:layout="@layout/fragment_new_todo" />
     <fragment
         android:id="@+id/editTodoFragment"
-        android:name="ro.ase.pdm.ultratodo.ui.EditTodo.EditTodoFragment"
+        android:name="ro.ase.pdm.ultratodo.ui.edittodo.EditTodoFragment"
         tools:layout="@layout/fragment_edit_todo">
 
         <argument
