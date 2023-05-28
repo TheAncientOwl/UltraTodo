@@ -20,6 +20,7 @@ import ro.ase.pdm.ultratodo.ui.EditTodo.EditTodoViewModel
 
 
 class EditTodoFragment : Fragment() {
+
     private var _binding: FragmentEditTodoBinding? = null
     private val binding get() = _binding!!
     private val args by navArgs<EditTodoFragmentArgs>()
