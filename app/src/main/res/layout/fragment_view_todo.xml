@@ -14,17 +14,12 @@
         android:lineSpacingExtra="8dp"
     />
 
-
-
-
     <TextView
         android:id="@+id/priorityTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:lineSpacingExtra="8dp"/>
-
-
 
     <TextView
         android:id="@+id/stateTextView"
@@ -33,8 +28,6 @@
         android:textSize="18sp"
         android:lineSpacingExtra="8dp"/>
 
-
-
     <TextView
         android:id="@+id/descriptionTextView"
         android:layout_width="match_parent"
@@ -42,14 +35,21 @@
         android:textSize="18sp"
         android:lineSpacingExtra="8dp"/>
 
-
-
-
     <TextView
         android:id="@+id/creationDateTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
+
+        android:textColor="@android:color/black"
+        android:lineSpacingExtra="8dp"
+        android:paddingBottom="8dp"/>
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete todo" />
         android:lineSpacingExtra="8dp"/>
 
     <Button
