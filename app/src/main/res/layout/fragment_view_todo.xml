@@ -41,7 +41,6 @@
         android:lineSpacingExtra="8dp"
 
         android:paddingBottom="8dp"
-        android:textColor="@android:color/black"
         android:textSize="18sp" />
 
     <Button
