@@ -19,6 +19,8 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyALHkZhPVSPXNJAKItVnGj3MdNnmoP037w" />
 
+        <service android:name=".services.GeolocationService"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
